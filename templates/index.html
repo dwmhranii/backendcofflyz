@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Tanaman Kopi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Deteksi Penyakit Tanaman Kopi</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image" name="file" accept="image/*" required>
+            <button type="submit">Unggah Gambar</button>
+        </form>
+
+        <div id="result">
+            <p id="prediction">Pilih gambar untuk diuji.</p>
+            <p id="confidence"></p>
+            <p id="disease-description"></p>
+        </div>
+
+        <!-- Menampilkan gambar yang diunggah -->
+        <img id="uploaded-image" src="" alt="Uploaded Image" style="max-width: 500px; display:none;">
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
